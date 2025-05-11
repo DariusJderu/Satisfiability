@@ -124,28 +124,28 @@ def este_SAT_Rezolutie(clauze):
 # si afiseaza daca formula este SAT sau UNSAT.
 # ======================================================
 
-# start = time.time()
-#
-# mat=creare_matrice_fisier(r"C:\Users\JDari\OneDrive\Desktop\Clauze\test1.cnf")
-#
-# mat=eliminare_clauze_triviale(mat)
-#
-# if este_SAT_Rezolutie(mat):
-#     print("Clauzele sunt SATISFIABILE")
-#
-#
-# else:
-#     print("Clauzele sunt NESATISFIABILE")
-#
-#
-# process = psutil.Process(os.getpid())
-# memory_info = process.memory_info()
-# print(f"Memorie consumată: {memory_info.rss}B")
-# print(f"Memorie consumată: {memory_info.rss / 1024:.2f}KB")
-# print(f"Memorie consumată: {memory_info.rss / (1024**2):.2f}MB")
-# print(f"Memorie consumată: {memory_info.rss / (1024**3):.2f}GB")
-#
-#
-# end = time.time()
-# elapsed_time = (end - start)
-# print(f"Timp total de execuție: {elapsed_time:.3f}")
+start = time.time()
+
+mat=creare_matrice_fisier(r"C:\Users\JDari\OneDrive\Desktop\Clauze\test1.cnf")
+
+mat=eliminare_clauze_triviale(mat)
+
+if este_SAT_Rezolutie(mat):
+    print("Clauzele sunt SATISFIABILE")
+
+
+else:
+    print("Clauzele sunt NESATISFIABILE")
+
+
+process = psutil.Process(os.getpid())
+memory_info = process.memory_info()
+print(f"Memorie consumată: {memory_info.rss}B")
+print(f"Memorie consumată: {memory_info.rss / 1024:.2f}KB")
+print(f"Memorie consumată: {memory_info.rss / (1024**2):.2f}MB")
+print(f"Memorie consumată: {memory_info.rss / (1024**3):.2f}GB")
+
+
+end = time.time()
+elapsed_time = (end - start)
+print(f"Timp total de execuție: {elapsed_time:.3f}")
